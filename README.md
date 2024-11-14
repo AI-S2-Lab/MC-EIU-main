@@ -8,26 +8,44 @@ Here are some ideas to get you started:
 -->
 
 
-# Features Download 
-The features are shared now:
+# MC-EIU
 
-Baidu Yun Link:
-(https://pan.baidu.com/s/1gxxr81tVytFTW2UjfTrh-g)
+### Introduction
 
-Please connect with the author by email to obtain the extraction code once the paper acceptance results are announced.
+This is the official repository for the MC-EIU dataset. More details can be found in the paper: [Emotion and Intent Joint Understanding in Multimodal Conversation: A Benchmarking Dataset](https://arxiv.org/abs/2407.02751).
 
-# Analysis of MC-EIU Dataset 
+[Rui Liu *](https://ttslr.github.io/), Haolin Zuo, Zheng Lian, Xiaofen Xing, Björn W. Schuller, Haizhou Li
 
-<div align="center">
-  <img src="Figures/MC-EIU-English_Correlation.jpg" width="45%" alt="English Dataset"></sub>
-  <img src="Figures/MC-EIU-Chinese_Correlation.jpg" width="45%" alt="Mandarin Dataset"></sub>  
-</div>
+### MC-EIU Overview
 
-<p align="center">Figure 1: Visualization of correlation between emotions and intents in the MC-EIU dataset. Each circle in the graph represents the sample count for a specific "Emotion-Intent" pair. Larger circles indicate more samples and higher correlation.</p>
+Statistic of our MC-EIU. UL refers to the utterance length, DU denotes the duration per utterance, UC is the utterances per conversation, EC means the emotions per conversation, and IC means the intents per conversation.
 
-We explore the correlation between emotion and intent in the MC-EIU-English and MC-EIU-Mandarin datasets.
-We created two 7×9 two-dimensional matrixes, with each element representing the number of samples in the two datasets for each 'Emotion-Intent' pair. Using the sample count as the radius, we visualized circles at the corresponding matrix positions.
+| Statistics                  | English               |                     |                    | Mandarin             |                     |                    |
+|-----------------------------|-----------------------|---------------------|--------------------|----------------------|---------------------|--------------------|
+|                             | Train                | Valid              | Test               | Train               | Valid              | Test               |
+| # Conversations             | 2,807                | 400                | 806                | 667                 | 95                 | 195                |
+| # Utterances                | 31,451               | 4,509              | 9,049              | 7,643               | 1,148              | 2,212              |
+| # Duration (hours)          | 28.51                | 4.02               | 8.22               | 8.51                | 1.36               | 2.42               |
+| Avg. UL                     | 12.68                | 12.49              | 12.76              | 19.11               | 19.91              | 18.14              |
+| Avg. # of DU (seconds)      | 3.26                 | 3.21               | 3.27               | 4.01                | 4.26               | 3.94               |
+| Avg. # of UC                | 11.20                | 11.27              | 11.23              | 11.46               | 12.08              | 11.34              |
+| Avg. # of EC                | 2.58                 | 2.57               | 2.60               | 2.41                | 2.54               | 2.42               |
+| Avg. # of IC                | 3.29                 | 3.86               | 3.87               | 3.18                | 3.24               | 3.10               |
 
-It can be observed that emotions and intents are not strictly one-to-one correspondences, and different intents vary in their influence on specific emotions, and vice versa. For example, compared to "Hap-Sym", "Hap-Agr" occurs at a higher frequency, indicating that "Agreeing" is more likely to drive the expression of "Happy".
-Additionally, we observe that the correlation between emotion and intent in the English dataset is more intricate compared to the Mandarin dataset. For example, the emotion "Sur" is associated with all intent categories in the English dataset, whereas in the Mandarin dataset, it is only linked to 6 intent categories ("Que", "Agr", "Con", "Sug", "Wis", and "Neu"). As we are aware, such complex relationships can pose challenges for the model's learning process. Consequently, the performance of our model on the English dataset is relatively lower than that on the Mandarin dataset.
 
+### MC-EIU Download
+
+The Hugging Face Link of MC-EIU is https://huggingface.co/datasets/YulangZhuo/MC-EIU/tree/main.
+
+### Citations
+If you find this dataset useful in your research, please consider citing the following paper:
+```
+    @article{
+    liu2024emotion,
+      title={Emotion and Intent Joint Understanding in Multimodal Conversation: A Benchmarking Dataset},
+      author={Liu, Rui and Zuo, Haolin and Lian, Zheng and Xing, Xiaofen and Schuller, Bj{\"o}rn W and Li, Haizhou},
+      journal={arXiv preprint arXiv:2407.02751},
+      year={2024}
+    }
+```
+⚠ The collected TV shows clips are all from public resources on the Internet. If there is any infringement, please contact us to delete them. (📧: zuohaolin_0613@163.com)
