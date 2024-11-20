@@ -35,7 +35,7 @@ Statistic of our MC-EIU. UL refers to the utterance length, DU denotes the durat
 
 ### MC-EIU Download
 
-The Hugging Face Link of MC-EIU is https://huggingface.co/datasets/YulangZhuo/MC-EIU/tree/main.
+The Hugging Face Link of MC-EIU is https://huggingface.co/datasets/YulangZhuo/MC-EIU.
 
 ### Citations
 If you find this dataset useful in your research, please consider citing the following paper:
