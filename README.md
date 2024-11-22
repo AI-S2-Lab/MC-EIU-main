@@ -48,4 +48,34 @@ If you find this dataset useful in your research, please consider citing the fol
       year={2024}
     }
 ```
+
+
+# Usage
+
+* Training MC-EIU
+
+  First training the pretrained encoder with all acoustic, visual, and text modalities. Taking Mandarin set as
+  an example:
+
+  ```bash
+  bash scripts/our/pretrain_Mandarin.sh AVL [num_of_expr] [GPU_index]
+  ```
+
+  Then, you can train the MC-EIU model with the following command:
+
+  ```bash
+    bash scripts/our/our_Mandarin.sh [num_of_expr] [GPU_index]
+  ```
+where the [num_of_expr] indicates the custom number of the training, and [GPU_index] is the index of GPU you want to use.
+
+Note that you can run the code with default hyper-parameters defined in shell scripts, for changing these arguments,
+please refer to options/get\_opt.py and the `modify_commandline_options` method of each model you choose.
+
+# License
+
+CC BY-NC 4.0.
+
+Copyright (c) 2024 S2Lab, Inner Mongolia University, Hohhot, China.
+
+
 ⚠ The collected TV shows clips are all from public resources on the Internet. If there is any infringement, please contact us to delete them. (📧: zuohaolin_0613@163.com)
